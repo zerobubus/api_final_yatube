@@ -1,4 +1,4 @@
-from rest_framework import viewsets, filters, permissions 
+from rest_framework import viewsets, filters, permissions, generics
 from django.shortcuts import get_object_or_404 
 from rest_framework.response import Response 
 from .serializers import PostSerializer, CommentSerializer, GroupSerializer, FollowSerializer
@@ -32,13 +32,13 @@ class CommentViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user, post=post)  
 
 
-class GroupViewSet(viewsets.ModelViewSet): 
+class GroupList(generics.ListCreateAPIView): 
     queryset = Group.objects.all() 
     serializer_class = GroupSerializer 
     permission_classes = [permissions.IsAuthenticatedOrReadOnly] 
     
 
-class FollowViewSet(viewsets.ModelViewSet): 
+class FollowList(generics.ListCreateAPIView): 
     queryset = Follow.objects.all() 
     serializer_class = FollowSerializer 
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, 

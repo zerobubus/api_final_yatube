@@ -9,7 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
         many=False, 
         read_only=True, 
         slug_field='username' 
-     ) 
+    ) 
 
     class Meta: 
         fields = '__all__' 
@@ -21,12 +21,12 @@ class CommentSerializer(serializers.ModelSerializer):
         many=False, 
         read_only=True, 
         slug_field='username' 
-     ) 
+    ) 
     post = serializers.SlugRelatedField( 
         many=False, 
         read_only=True, 
         slug_field='id' 
-     ) 
+    ) 
     class Meta: 
         fields = '__all__' 
         model = Comment 
@@ -48,16 +48,16 @@ class FollowSerializer(serializers.ModelSerializer):
     following = serializers.SlugRelatedField( 
         queryset=get_user_model().objects.all(),
         slug_field='username'
-     )
+    )
 
     class Meta: 
         fields = ('user', 'following',)
         model = Follow
 
     validators = [
-            UniqueTogetherValidator(
-                queryset=Follow.objects.all(),
-                fields=('user', 'following')
-            )
-        ]
+        UniqueTogetherValidator(
+            queryset=Follow.objects.all(),
+            fields=('user', 'following')
+        )
+    ]
       
