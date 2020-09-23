@@ -1,7 +1,7 @@
-GET    http://127.0.0.1:8000/api/v1/group/
+POST    http://127.0.0.1:8000/api/v1/follow/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwODAzNDA1LCJqdGkiOiI2MjhkZmU1YjkyYmE0NzJiODViY2YyZGY3YTk2YTA0NiIsInVzZXJfaWQiOjJ9.St9ay1M0FhwS70jLxmypo4qW2ojsy7zTECKVN5J_d-Q
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwOTAxODI3LCJqdGkiOiJhODQxNzBmZGQ0ZWU0OWIzYThkNTk2NjE2MzI3NzZjZiIsInVzZXJfaWQiOjJ9.FyWHBkABiLkBZoag5NY1NQyx6QHG9_IUvBE-td7Zsyo
 
 {
-  "title": "movies"
+  "following": "admin"
 }

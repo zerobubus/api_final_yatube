@@ -49,11 +49,8 @@ class FollowSerializer(serializers.ModelSerializer):
         queryset=get_user_model().objects.all(),
         slug_field='username'
     )
-
-    class Meta: 
-        fields = ('user', 'following',)
-        model = Follow
-
+    
+    
     validators = [
         UniqueTogetherValidator(
             queryset=Follow.objects.all(),
@@ -61,3 +58,6 @@ class FollowSerializer(serializers.ModelSerializer):
         )
     ]
       
+    class Meta: 
+        fields = ('user', 'following',)
+        model = Follow

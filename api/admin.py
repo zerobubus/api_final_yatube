@@ -26,8 +26,10 @@ class FollowAdmin(admin.ModelAdmin):
     list_display = ("user", "following")  
      
  
+     
 # при регистрации модели Post источником конфигурации для неё назначаем класс PostAdmin 
 admin.site.register(Post, PostAdmin) 
 admin.site.register(Comment, CommentAdmin) 
 admin.site.register(Group, GroupAdmin) 
 admin.site.register(Follow, FollowAdmin) 
+

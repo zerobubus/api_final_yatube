@@ -15,7 +15,12 @@ router.register(
     'posts/(?P<id>\d+)/comments', 
     CommentViewSet, basename ='perform_create'
     ) 
- 
+router.register(
+    'group', GroupList, basename ='group_list'
+    )
+router.register(
+    'follow', FollowList, basename ='follow_list'
+    )
  
 urlpatterns = [
         path(
@@ -27,16 +32,6 @@ urlpatterns = [
             'v1/token/refresh/', 
             TokenRefreshView.as_view(), 
             name='token_refresh'
-        ),
-        path(
-            'v1/group/', 
-            GroupList.as_view(), 
-            name='group-list'
-        ), 
-        path(
-            'v1/follow/', 
-            FollowList.as_view(), 
-            name='follow-list'
         ), 
         path('v1/', include(router.urls)),   
     ]
