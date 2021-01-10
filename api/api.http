@@ -1,7 +1,0 @@
-POST    http://127.0.0.1:8000/api/v1/follow/
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwOTAxODI3LCJqdGkiOiJhODQxNzBmZGQ0ZWU0OWIzYThkNTk2NjE2MzI3NzZjZiIsInVzZXJfaWQiOjJ9.FyWHBkABiLkBZoag5NY1NQyx6QHG9_IUvBE-td7Zsyo
-
-{
-  "following": "admin"
-}
